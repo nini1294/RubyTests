@@ -26,12 +26,22 @@ bb = "Hello33World"
 # cc = (-2..2).to_a
 # puts cc.to_s
 
-# Repetetive stuff
+# Repetetion stuff
 ct = 10
 arr1 = Array.new(ct)
 ct.times { |n| arr1[n] = (n) ** 2 }
 # puts arr.to_s
 arr2 = Array.new(ct) { |i| i ** 2 }
-puts arr1[0..3]
+arr1[arr1.length] = 2
+# puts arr1.to_s
+
 
 # Hashes and things
+# dd = Hash["a", 'a'.ord, "b", 'b'.ord]
+# puts dd.keys
+# puts dd.values
+ee = {}
+ct.times { |n| ee[('a'.ord + n).chr] = 'a'.ord + n}
+# puts ee.keys.to_s
+# puts ee.values.to_s
+puts ee.select { |e| ee[e] > 100}
