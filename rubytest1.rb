@@ -34,7 +34,10 @@ ct.times { |n| arr1[n] = (n) ** 2 }
 arr2 = Array.new(ct) { |i| i ** 2 }
 arr1[arr1.length] = 2
 # puts arr1.to_s
-
+# ct.times { |n| 
+#     puts Time.now
+#     sleep(1)
+# }
 
 # Hashes and things
 # dd = Hash["a", 'a'.ord, "b", 'b'.ord]
@@ -44,4 +47,21 @@ ee = {}
 ct.times { |n| ee[('a'.ord + n).chr] = 'a'.ord + n}
 # puts ee.keys.to_s
 # puts ee.values.to_s
-puts ee.select { |e| ee[e] > 100}
+# puts ee.select { |e| ee[e] > 100}
+
+# File I/O
+
+# Method 1
+# File.open("helloworld.txt", "w") { |io| 
+#   puts io.size
+#   ct.times { |n| io.puts "#{n} : This is line #{n+1}" }
+#   puts io.size
+# }
+
+# Method 2
+# fp = File.open("helloworld.txt", "w") do |fptr|
+#   ct.times { |n| fptr.puts "#{n += 1} : This is line #{n} using Method 2" }
+# end
+
+# File.delete("helloWorld.txt")
+
