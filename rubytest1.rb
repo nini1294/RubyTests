@@ -63,5 +63,7 @@ ct.times { |n| ee[('a'.ord + n).chr] = 'a'.ord + n}
 #   ct.times { |n| fptr.puts "#{n += 1} : This is line #{n} using Method 2" }
 # end
 
+File.foreach("helloworld.txt") { |line| print line }
+
 # File.delete("helloWorld.txt")
 
