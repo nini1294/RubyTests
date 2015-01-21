@@ -8,6 +8,7 @@ showname = gets.chomp
 print "Season Number:"
 seasonnum = gets.chomp
 ur = "http://api.trakt.tv/show/season.json/" + key + "/" + showname + "/" + seasonnum
+puts ur
 # ur = "http://api.trakt.tv/shows/trending.json/2ed1543a3068685354d8a7ade6474072"
 uri = URI(ur)
 http = Net::HTTP.new(uri.host, uri.port)

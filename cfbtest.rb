@@ -29,7 +29,7 @@ def get_team_record(parameter, details)
               e[otherScore] = "0#{e[otherScore]}"
             end
             win = (e["winner"] == parameter)? "W" : "L"
-            op += "%02d :: %s : %02d - %02d : %-15s %s\n" % [e["week"], parameter, e[score], e[otherScore], e[otherTeam], win]
+            op += "%02d :: %s : %02d - %02d : %-18s %s\n" % [e["week"], parameter, e[score], e[otherScore], e[otherTeam], win]
           end
         end
       end
