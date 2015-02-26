@@ -11,13 +11,21 @@ bot = Cinch::Bot.new do
         m.reply "Hello, #{m.user.nick}"
     end
 
-    on :message, /debug/ do |m|
+    on :message, /debug/i do |m|
         m.reply m
     end
 
-    on :message, /time/ do |m|
+    on :message, /time/i do |m|
         t = Time.now
         m.reply "It is, #{t.strftime("%H:%M")}"
+    end
+    on :message, /day/i do |m|
+        t = Time.now
+        m.reply "It is a, #{t.strftime("%A")}"
+    end
+    on :message, /date/i do |m|
+        t = Time.now
+        m.reply "It is, #{t.strftime("%d/%m/%Y")}"
     end
 
 end
