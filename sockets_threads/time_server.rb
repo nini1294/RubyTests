@@ -5,6 +5,7 @@ loop {
     Thread.start(ts.accept) do |a|
         print(a, "a is accepted\n");
         a.write(Time.now);
+        a.write("\n");
         print(a, "a is gone\n");
         a.close
     end
