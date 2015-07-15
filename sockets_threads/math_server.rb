@@ -1,5 +1,5 @@
 require 'socket'
-require_relative 'fact'
+# require_relative 'fact'
 
 ms = TCPServer.new('localhost', 20_000)
 loop do
@@ -10,7 +10,8 @@ loop do
     loop do
       inp = client.gets.chomp
       if !inp.empty?
-        out = fact(inp.to_s)
+        # out = fact(inp.to_s)
+        out = inp.to_s
         client.puts(out)
         client.flush
       else
