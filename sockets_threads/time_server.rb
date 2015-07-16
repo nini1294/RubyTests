@@ -1,11 +1,11 @@
 require 'socket'
 
-ts = TCPServer.new('localhost', 20_000)
+ts = TCPServer.new('localhost', 20_005)
 loop do
   Thread.start(ts.accept) do |a|
-    print(a, 'a is accepted\n')
+    puts("#{a} is accepted")
     a.puts(Time.now)
-    print(a, 'a is gone\n')
+    puts("#{a} is gone")
     a.close
   end
 end

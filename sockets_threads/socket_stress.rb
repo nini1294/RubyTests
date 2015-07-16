@@ -11,7 +11,7 @@ timer = Thread.start do
 end
 
 loop do
-  ss = TCPSocket.new('localhost', 20_000)
+  ss = TCPSocket.new('localhost', 20_005)
   ss.recv(100)
   @a += 1
   sleep 0.05

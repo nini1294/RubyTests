@@ -1,12 +1,12 @@
 require 'socket'
 # require_relative 'fact'
 
-ms = TCPServer.new('localhost', 20_000)
+ms = TCPServer.new('localhost', 20_005)
 loop do
   Thread.start(ms.accept) do |client|
     puts 'Hi'
     client.write(Time.now)
-    client.write('\n')
+    client.write("\n")
     loop do
       inp = client.gets.chomp
       if !inp.empty?
