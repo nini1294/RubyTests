@@ -1,20 +1,20 @@
-require "socket"
+require 'socket'
 
-@a = 0;
+@a = 0
 
 timer = Thread.start do
-    loop {
-        @a = 0;
-        puts @a + " req/s";
-        sleep(1);
-    }
+  loop do
+    @a = 0
+    puts @a + ' req/s'
+    sleep(1)
+  end
 end
 
-loop {
-    ss = TCPSocket.new('localhost', 20000);
-    ss.recv(100);
-    @a += 1;
-    sleep 0.05;
-}
+loop do
+  ss = TCPSocket.new('localhost', 20_005)
+  ss.recv(100)
+  @a += 1
+  sleep 0.05
+end
 
-timer.join;
+timer.join
