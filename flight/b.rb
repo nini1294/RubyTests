@@ -20,3 +20,5 @@ def depth(hash, d)
   end
   hash
 end
+
+puts a
