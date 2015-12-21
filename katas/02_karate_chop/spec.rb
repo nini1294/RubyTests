@@ -5,7 +5,7 @@ require './day_three.rb'
 
 RSpec::Given.use_natural_assertions
 
-klasses = [DayOne, DayTwo]
+klasses = [DayOne, DayTwo, DayThree]
 
 klasses.each do |klass|
   RSpec.describe klass do
