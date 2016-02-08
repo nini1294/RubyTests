@@ -1,7 +1,7 @@
 require 'rspec/given'
-require './day_one.rb'
-require './day_two.rb'
-require './day_three.rb'
+require_relative 'day_one.rb'
+require_relative 'day_two.rb'
+require_relative 'day_three.rb'
 
 RSpec::Given.use_natural_assertions
 
